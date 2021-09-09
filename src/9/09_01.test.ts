@@ -28,9 +28,7 @@ test.skip('reference type test', () => {
   expect(user.age).toBe(1000)
 })
 
-test('array test', () => {
-
-
+test.skip('array test', () => {
   let users = [
     {
       name: 'Dimych',
@@ -49,4 +47,15 @@ test('array test', () => {
   expect(users[2]).toEqual({name: 'Bandit', age: 10})
 })
 
+
+test('value type', () => {
+
+  let usersCount = 100;
+  let adminsCount = usersCount
+
+  adminsCount = 101
+
+  expect(usersCount).toBe(100)
+  expect(adminsCount).toBe(101)
+})
 
